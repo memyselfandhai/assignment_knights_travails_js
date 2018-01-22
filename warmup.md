@@ -35,19 +35,23 @@ iterate through rootNode's child nodes, checking for N
 }
 
 search (tree, node){
-let stack = [populate(rootNode)]
+let stack = [populate(rootNoåde)]
 
 while the stack is not empty
 
 }
 
-stack = [rootNode]
+searching for 1
+
+stack = [8, 3, 1, 6 ]
 
 search (n) {
+
 while stack is not empty
 if (stack[-1] != N)
 {push all of the last element's children onto the stack}
-if last node has children, push it onto the stack? (until there arent any children)
+{ set value of the node to an object with property visited = true}
+if VISITED = TRUE && stack[-1] != n? => pop off last element
 
 evaluate if stack[-1] == n? return n : pop stack[-1]
 
