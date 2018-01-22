@@ -7,6 +7,7 @@ class MoveTree {
   constructor(coordinates, maxDepth) {
     this.coordinates = coordinates;
     this.maxDepth = maxDepth;
+    this.children = [];
   }
 
   inspect() {
@@ -16,6 +17,7 @@ class MoveTree {
       }.`
     );
   }
+  
 }
 
 let tree = new MoveTree([3, 3], 1);
@@ -23,7 +25,7 @@ tree.inspect();
 let otherInstance = new MoveTree([1, 2], 1);
 
 class Move {
-  constructor(x, y, depth, children, parent) {
+  constructor(x, y, depth=1, children=[], parent=null) {
     this.x = x;
     this.y = y;
     this.depth = depth;
@@ -61,9 +63,21 @@ function getNextPositions(start) {
       filteredPositions.push(move);
     }
   });
-
+  console.log(filteredPositions)
   return filteredPositions;
 }
+ getNextPositions({x:3,y:3}).map(position=>{
+  let pos = new Move(position.x, position.y, 1)
+  tree.children.push(pos)
+})
 
-console.log("tree => ", tree);
-console.log(otherInstance);
+ tree.children.map(child =>{
+ 
+ getNextPositions({x: child.x, y:child.y}).map(coord=>{
+ let pos = new Move(coord.x , coord.y, 2)
+child.children.push(pos)
+ })
+
+ })
+console.log("tree => ", tree.children);
+console.log(Object.values(tree));
