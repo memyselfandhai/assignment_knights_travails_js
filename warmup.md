@@ -49,7 +49,26 @@ search (n) {
 
 while stack is not empty
 if (stack[-1] != N)
+
 {push all of the last element's children onto the stack}
+let counter = 0;
+if (node.children[i] !visited) {
+
+if node.children[i] === n 
+counter +=1 
+return match, counter
+else if (node.children[i] !== n) {
+	node.children(left or right)[i].visited = true
+	counter +=1 
+}
+
+loop through stack 
+if visited 
+remove visited children from stack,
+
+repopulate stack with 
+
+return 
 { set value of the node to an object with property visited = true}
 if VISITED = TRUE && stack[-1] != n? => pop off last element
 
