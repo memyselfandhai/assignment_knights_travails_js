@@ -54,21 +54,21 @@ if (stack[-1] != N)
 let counter = 0;
 if (node.children[i] !visited) {
 
-if node.children[i] === n 
-counter +=1 
+if node.children[i] === n
+counter +=1
 return match, counter
 else if (node.children[i] !== n) {
-	node.children(left or right)[i].visited = true
-	counter +=1 
+node.children(left or right)[i].visited = true
+counter +=1
 }
 
-loop through stack 
-if visited 
+loop through stack
+if visited
 remove visited children from stack,
 
-repopulate stack with 
+repopulate stack with
 
-return 
+return
 { set value of the node to an object with property visited = true}
 if VISITED = TRUE && stack[-1] != n? => pop off last element
 
@@ -79,3 +79,7 @@ evaluate if stack[-1] == n? return n : pop stack[-1]
 Searching the same tree using BFS.
 Searching a graph (represented however you feel most comfortable -- Edge List, Adjacency List or Adjacency Matrix) using DFS.
 Searching the same graph using BFS.
+
+1. deposit
+2. pop, evaluate, mark as VISITED
+3. add children if any to stack
